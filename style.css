@@ -70,6 +70,20 @@ body {
     background-color: hsl(230, 17%, 14%);
     color: hsl(0, 0%, 100%);
 }
+.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+
+  }
+  .light-mode .social-box {
+      background-color: hsl(227, 47%, 96%);
+  }
+  .light-mode .social-box:hover {
+    background-color: hsl(230, 33%, 86%);
+}
+.light-mode .toogle-title {
+    color: hsl(228, 34%, 66%);
+}
 .container {
     max-width: 1200px;
     width: 100%;
@@ -150,6 +164,10 @@ h3 {
     border-radius: 10px;
     text-align: center;
 }
+.social-box:hover {
+    background-color: hsl(230, 29%, 28%);
+
+}
 #facebook {
     border-top: 5px solid hsl(208, 92%, 53%);
 }
@@ -157,7 +175,10 @@ h3 {
     border-top: 5px solid hsl(203, 89%, 53%);
 }
 #insta {
-    border-top: 5px solid hsl(329, 70%, 58%);
+    border-top: 5px solid;
+    border-radius: 10px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(253,196,104,1) 0%, rgba(223,73,150,1) 100%);
 }
 #youtube {
     border-top: 5px solid hsl(348, 97%, 39%);
@@ -250,10 +271,17 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(64,148,231,1) 0%, rgba(62,218,130,1) 100%);
+  background: hsl(228, 34%, 66%);
   -webkit-transition: .4s;
   transition: .4s;
 }
+.slider:hover {
+    background:  linear-gradient(90deg, rgba(64,148,231,1) 0%, rgba(62,218,130,1) 100%);;
+   
+  }
+  .light-mode .slider::before{
+    background-color: white;
+  }
 
 .slider:before {
   position: absolute;
@@ -262,17 +290,13 @@ h3 {
   width: 22px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color:hsl(230, 17%, 14%);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  background-color:  linear-gradient(90deg, rgba(64,148,231,1) 0%, rgba(62,218,130,1) 100%);;
 }
 
 input:checked + .slider:before {
